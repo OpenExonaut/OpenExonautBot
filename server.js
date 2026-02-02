@@ -16,12 +16,12 @@ client.once(Events.ClientReady, (readyClient) => {
                             console.error(e);
                         }
                     })
-                    .catch((_) => {
+                    .catch((e) => {
                         readyClient.user.setActivity("OpenExonaut isn't making sense!");
                         console.error(e);
                     });
             })
-            .catch((_) => {
+            .catch((e) => {
                 readyClient.user.setActivity('OpenExonaut is offline!');
                 console.error(e);
             });
